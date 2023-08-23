@@ -1,0 +1,16 @@
+actions:
+- action: "Push to https://app.buddy.works/buddy/repo"
+  type: "PUSH"
+  login: "api_tests_user"
+  password: "api_tests_password"
+  push_tags: false
+  git_auth_mode: "HTTP"
+  target_branch: "$BUDDY_EXECUTION_BRANCH"
+  push_url: "https://app.buddy.works/buddy/repo"
+  comment: "$BUDDY_EXECUTION_ID"
+  tag: "tagName"
+  deployment_excludes:
+  - "/tmp/"
+  use_custom_gitignore: true
+  custom_options: "--no-verify"
+  without_force: false
